@@ -1,0 +1,66 @@
+
+## Gabubu's config for alacrittya terminal. I hope you like it +1
+## The fonts. Choose the nice one. Like every hacker does ;)
+font:
+  normal:
+    family: terminus
+    style: Regular
+
+  bold:
+    family: terminus
+    style: Bold
+
+  italic:
+    family: terminus
+    style: Italic
+
+  bold_italic:
+    family: terminus
+    style: Bold Italic
+
+  size: 9
+
+## Color scheme
+colors:
+  # Default colors
+  primary:
+    background: '#000531'
+    foreground: '#000531'
+
+    dim_foreground: '#000316'
+    bright_foreground: '#0017c3'
+    dim_background: '#000316'
+    bright_background: '#0017c3'
+
+  # Normal colors
+  normal:
+    black: '#232627'
+    red: '#ed1515'
+    green: '#11d116'
+    yellow: '#f67400'
+    blue: '#1d99f3'
+    magenta: '#9b59b6'
+    cyan: '#1abc9c'
+    white: '#fcfcfc'
+
+  # Bright colors
+  bright:
+    black: '#7f8c8d'
+    red: '#c0392b'
+    green: '#1cdc9a'
+    yellow: '#fdbc4b'
+    blue: '#3daee9'
+    magenta: '#8e44ad'
+    cyan: '#16a085'
+    white: '#ffffff'
+
+  # Dim colors
+  dim:
+    black: '#31363b'
+    red: '#783228'
+    green: '#17a262'
+    yellow: '#b65619'
+    blue: '#1b668f'
+    magenta: '#614a73'
+    cyan: '#186c60'
+    white: '#63686d'
