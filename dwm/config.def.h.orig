@@ -12,17 +12,22 @@ static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;     /* 0 means no bar */
 static const int topbar             = 0;     /* 0 means bottom bar */
 static const int user_bh            = 20;       /* height of the bar */
-static const char *fonts[]          = { "terminus:size=9", "fontawesome:size=9" };
+static const char *fonts[]          = { "terminus:size=9", "fontawesome:size=18" };
 static const char dmenufont[]       = "terminus:size=9";
-static const char col_gray1[]       = "#000d84";
-static const char col_gray2[]       = "#00063e";
-static const char col_gray3[]       = "#999999";
-static const char col_gray4[]       = "#ffffff";
-static const char col_cyan[]        = "#000d84";
+static const char col_gray1[]       = "#ffffff"; // white
+static const char col_gray2[]       = "#c8c8c8"; // gray {for unsellected duh}
+static const char col_gray3[]       = "#000433"; // main gabubu color but a bit dimmer but way more dimmer
+static const char col_gray4[]       = "#000a74"; // main gabubu color but a bit bimmer
+static const char col_cyan[]        = "#000d84"; // main gabubu color
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	/*                      fg         bg         border   */
+	[SchemeNorm]      = { col_gray1, col_cyan, col_gray3 },
+	[SchemeSel]       = { col_gray1, col_cyan,  col_cyan  },
+	[SchemeStatus]    = { col_gray1, col_gray4,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeTagsSel]   = { col_gray1, col_cyan,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+    [SchemeTagsNorm]  = { col_gray2, col_gray3,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+    [SchemeInfoSel]   = { col_gray1, col_cyan,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
+    [SchemeInfoNorm]  = { col_gray2, col_gray4,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 /* tagging */
@@ -46,8 +51,8 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "TILE",      tile },    /* first entry is default */
-	{ "FLOAT",      NULL },    /* no layout function means floating behavior */
+	{ "",      tile },    /* first entry is default */
+	{ "",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 };
 

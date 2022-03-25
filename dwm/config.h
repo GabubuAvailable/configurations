@@ -11,6 +11,7 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;     /* 0 means no bar */
 static const int topbar             = 0;     /* 0 means bottom bar */
+static const int focusonwheel       = 0;     /* 0 means it won't use the wheel instead of click to focus */
 static const int user_bh            = 20;       /* height of the bar */
 static const char *fonts[]          = { "terminus:size=9", "fontawesome:size=18" };
 static const char dmenufont[]       = "terminus:size=9";
@@ -51,8 +52,8 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "TILE",      tile },    /* first entry is default */
-	{ "FLOAT",      NULL },    /* no layout function means floating behavior */
+	{ "",      tile },    /* first entry is default */
+	{ "",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 };
 
