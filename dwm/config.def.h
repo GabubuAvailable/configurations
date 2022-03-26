@@ -71,6 +71,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", NULL };
+static const char *dmpc[] = { "dmpc", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *flameshot[] = { "flameshot", "gui",  NULL };
 
@@ -79,6 +80,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = dmpc } },
 	{ 0,                            XK_Print,  spawn,          {.v = flameshot } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
