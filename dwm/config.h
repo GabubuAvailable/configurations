@@ -18,8 +18,8 @@ static const char dmenufont[]       = "terminus:size=9";
 static const char col_gray1[]       = "#ffffff"; // white
 static const char col_gray2[]       = "#c8c8c8"; // gray {for unsellected duh}
 static const char col_gray3[]       = "#000433"; // main gabubu color but a bit dimmer but way more dimmer
-static const char col_gray4[]       = "#000a74"; // main gabubu color but a bit bimmer
-static const char col_cyan[]        = "#000d84"; // main gabubu color
+static const char col_gray4[]       = "#000a74"; // main gabubu color but a bit dimmer
+static const char col_cyan[]        = "#000a74"; // main gabubu color
 static const char *colors[][3]      = {
 	/*                      fg         bg         border   */
 	[SchemeNorm]      = { col_gray1, col_cyan, col_gray3 },
@@ -33,6 +33,18 @@ static const char *colors[][3]      = {
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+
+static const char *tagsel[][2] = {
+	{ "#ff0000", "#000a63" },
+	{ "#ff5500", "#000a63" },
+	{ "#cfcf00", "#000a63" },
+	{ "#00ff00", "#000a63" },
+	{ "#00ff00", "#000a63" },
+	{ "#9400d3", "#000a63" },
+	{ "#aa5500", "#000a63" },
+	{ "#aaff7f", "#000a63" },
+	{ "#ffaaff", "#000a63" },
+};
 
 static const Rule rules[] = {
 	/* xprop(1):

@@ -11,6 +11,7 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;     /* 0 means no bar */
 static const int topbar             = 0;     /* 0 means bottom bar */
+static const int focusonwheel       = 0;     /* 0 means it won't use the wheel instead of click to focus */
 static const int user_bh            = 20;       /* height of the bar */
 static const char *fonts[]          = { "terminus:size=9", "fontawesome:size=18" };
 static const char dmenufont[]       = "terminus:size=9";
@@ -31,7 +32,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -70,6 +71,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", NULL };
+static const char *dmpc[] = { "dmpc", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *flameshot[] = { "flameshot", "gui",  NULL };
 
@@ -78,6 +80,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = dmpc } },
 	{ 0,                            XK_Print,  spawn,          {.v = flameshot } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
