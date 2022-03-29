@@ -19,31 +19,32 @@ static const char col_gray1[]       = "#ffffff"; // white
 static const char col_gray2[]       = "#c8c8c8"; // gray {for unsellected duh}
 static const char col_gray3[]       = "#000433"; // main gabubu color but a bit dimmer but way more dimmer
 static const char col_gray4[]       = "#000a74"; // main gabubu color but a bit dimmer
-static const char col_cyan[]        = "#000a74"; // main gabubu color
+static const char col_gray5[]       = "#000f98"; // main gabubu color but a bit brighter
+static const char col_cyan[]        = "#00084b"; // main gabubu color
 static const char *colors[][3]      = {
 	/*                      fg         bg         border   */
 	[SchemeNorm]      = { col_gray1, col_cyan, col_gray3 },
 	[SchemeSel]       = { col_gray1, col_cyan,  col_cyan  },
-	[SchemeStatus]    = { col_gray1, col_gray4,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeStatus]    = { col_gray1, col_cyan,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeTagsSel]   = { col_gray1, col_cyan,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
-    [SchemeTagsNorm]  = { col_gray2, col_gray3,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
-    [SchemeInfoSel]   = { col_gray1, col_cyan,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
-    [SchemeInfoNorm]  = { col_gray2, col_gray4,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+    [SchemeTagsNorm]  = { col_gray2, col_cyan,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+    [SchemeInfoSel]   = { col_gray1, col_gray4,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
+    [SchemeInfoNorm]  = { col_gray2, col_gray3,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const char *tagsel[][2] = {
-	{ "#ff0000", "#000a63" },
-	{ "#ff5500", "#000a63" },
-	{ "#cfcf00", "#000a63" },
-	{ "#00ff00", "#000a63" },
-	{ "#00ff00", "#000a63" },
-	{ "#9400d3", "#000a63" },
-	{ "#aa5500", "#000a63" },
-	{ "#aaff7f", "#000a63" },
-	{ "#ffaaff", "#000a63" },
+	{ "#ff0000", "#00042c" },
+	{ "#ff5500", "#00042c" },
+	{ "#cfcf00", "#00042c" },
+	{ "#00ff00", "#00042c" },
+	{ "#00aaff", "#00042c" },
+	{ "#9400d3", "#00042c" },
+	{ "#aa5500", "#00042c" },
+	{ "#aaff7f", "#00042c" },
+	{ "#ffaaff", "#00042c" },
 };
 
 static const Rule rules[] = {
