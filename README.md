@@ -18,7 +18,7 @@ Just a repo with all my configs :)
   - fullgaps (gaps between windows)
   - systray (system tray for apps i use most)
 + softwares i use for a complete modification
-  - [setwallpaper](https://github.com/speediegamer/setwallpaper) (does what the title it says lol)
+  - [setwallpaper](https://github.com/speediegamer/setwallpaper) (does what the title says lol)
   - [dmpc](https://github.com/jornmann/dmpc/) (dmenu mpc)
   - feh (doas or sudo pacman/apt/emerge -S/install/--ask feh) (an image viewer. feh is used for setwallpaper to work properly)
   - picom (doas or sudo pacman/apt/emerge -S/install/--ask picom) (standalone compositor for Xorg)
