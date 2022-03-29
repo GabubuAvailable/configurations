@@ -9,14 +9,15 @@ Just a repo with all my configs :)
 
 ## What I modified/added?
 ### dwm (dynamic window manager)
-+ added 7 patches
-  - alwayscenter (every floating window will spawn always to the center)
-  - barheight (height of the bar)
-  - centeredwindowname (window name on the center of bar)
-  - colorbar (colors the bar)
-  - focusonclick (focus on click duh)
-  - fullgaps (gaps between windows)
-  - systray (system tray for apps i use most)
++ added 8 patches
+  - [alwayscenter](https://dwm.suckless.org/patches/alwayscenter/) (every floating window will spawn always to the center)
+  - [bar height](https://dwm.suckless.org/patches/bar_height/) (height of the bar)
+  - [centeredwindowname](https://dwm.suckless.org/patches/centeredwindowname/) (window name on the center of bar)
+  - [colorbar](https://dwm.suckless.org/patches/colorbar/) (colors the bar)
+  - [focusonclick](https://dwm.suckless.org/patches/focusonclick/) (focus on click duh)
+  - [fullgaps](https://dwm.suckless.org/patches/fullgaps/) (gaps between windows)
+  - [systray](https://dwm.suckless.org/patches/systray/) (system tray for apps i use most)
+  - [rainbowtags](https://dwm.suckless.org/patches/rainbowtags/) (colores each tag)
 + softwares i use for a complete modification
   - [setwallpaper](https://github.com/speediegamer/setwallpaper) (does what the title says lol)
   - [dmpc](https://github.com/jornmann/dmpc/) (dmenu mpc)
@@ -39,8 +40,14 @@ Just a repo with all my configs :)
 
 ## Screenshots
 ![dwm](https://user-images.githubusercontent.com/88589756/160250288-25aa2684-7a44-434e-b0be-59cd9a5fbcf1.png)
-![dwm bar](https://user-images.githubusercontent.com/88589756/160250377-c4c328bf-dbbb-4997-80b0-78961538d7f7.png)
+dwm
+![dwm bar](https://user-images.githubusercontent.com/88589756/160675317-8dc0a551-212f-4061-89fc-069c8c9e022a.png)
+dwm bar
 ![alacritty](https://user-images.githubusercontent.com/88589756/160250311-a6f1f711-9e1a-474f-b335-dfe8fd3b16a4.png)
+alacritty - the terminal
 ![dmenu](https://user-images.githubusercontent.com/88589756/160250334-797ec0a9-a8a3-496e-9a9f-8cc98f91ce59.png)
+dmenu
 ![slstatus](https://user-images.githubusercontent.com/88589756/160250357-03f345c5-b172-4b5c-b442-114e4ed4f1a1.png)
+slstatus
 ![Discord](https://user-images.githubusercontent.com/88589756/160545895-a5977c52-ee0f-4588-a8c6-c5306e48dc72.png)
+discord
