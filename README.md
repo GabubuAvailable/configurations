@@ -41,7 +41,7 @@ Just a repo with all my configs :)
 ## Screenshots
 ![dwm](https://user-images.githubusercontent.com/88589756/160250288-25aa2684-7a44-434e-b0be-59cd9a5fbcf1.png)
 dwm
-![dwm bar](https://user-images.githubusercontent.com/88589756/160675317-8dc0a551-212f-4061-89fc-069c8c9e022a.png)
+![dwm bar](https://user-images.githubusercontent.com/88589756/160917399-b790bf22-b648-4d5f-8c26-a3cd8c9e9c07.png)
 dwm bar
 ![alacritty](https://user-images.githubusercontent.com/88589756/160250311-a6f1f711-9e1a-474f-b335-dfe8fd3b16a4.png)
 alacritty - the terminal
