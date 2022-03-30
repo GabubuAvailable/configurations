@@ -15,38 +15,26 @@ static const int focusonwheel       = 0;     /* 0 means it won't use the wheel i
 static const int user_bh            = 20;       /* height of the bar */
 static const char *fonts[]          = { "terminus:size=9", "fontawesome:size=18" };
 static const char dmenufont[]       = "terminus:size=9";
-static const char col_gray1[]       = "#ffffff"; // white
-static const char col_gray2[]       = "#c8c8c8"; // gray {for unsellected duh}
-static const char col_gray3[]       = "#000433"; // main gabubu color but a bit dimmer but way more dimmer
-static const char col_gray4[]       = "#000a74"; // main gabubu color but a bit dimmer
-static const char col_gray5[]       = "#000f98"; // main gabubu color but a bit brighter
-static const char col_cyan[]        = "#00084b"; // main gabubu color
+static const char col_white[]       = "#ffffff"; // white
+static const char col_gray[]        = "#b5b5b5"; // gray {for unsellected duh}
+static const char col_minus3[]      = "#000329"; // main gabubu color but a bit dimmer but dimmer but dimmer
+static const char col_minus2[]      = "#000851"; // main gabubu color but a bit dimmer but dimmer
+static const char col_minus1[]      = "#00085f"; // main gabubu color but a bit dimmer
+static const char col_plus1[]       = "#0015cf"; // main gabubu color but a bit brighter
+static const char col_main[]        = "#000c8e"; // main gabubu color
 static const char *colors[][3]      = {
 	/*                      fg         bg         border   */
-	[SchemeNorm]      = { col_gray1, col_cyan, col_gray3 },
-	[SchemeSel]       = { col_gray1, col_cyan,  col_cyan  },
-	[SchemeStatus]    = { col_gray1, col_cyan,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeTagsSel]   = { col_gray1, col_cyan,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
-    [SchemeTagsNorm]  = { col_gray2, col_cyan,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
-    [SchemeInfoSel]   = { col_gray1, col_gray4,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
-    [SchemeInfoNorm]  = { col_gray2, col_gray3,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+	[SchemeNorm]      = { col_white, col_main, col_minus1 },
+	[SchemeSel]       = { col_white, col_minus2,  col_main  },
+	[SchemeStatus]    = { col_white, col_minus1,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeTagsSel]   = { col_white, col_minus3,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+    [SchemeTagsNorm]  = { col_gray, col_minus1,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+    [SchemeInfoSel]   = { col_white, col_minus3,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
+    [SchemeInfoNorm]  = { col_gray, col_minus1,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-
-static const char *tagsel[][2] = {
-	{ "#ff0000", "#00042c" },
-	{ "#ff5500", "#00042c" },
-	{ "#cfcf00", "#00042c" },
-	{ "#00ff00", "#00042c" },
-	{ "#00aaff", "#00042c" },
-	{ "#9400d3", "#00042c" },
-	{ "#aa5500", "#00042c" },
-	{ "#aaff7f", "#00042c" },
-	{ "#ffaaff", "#00042c" },
-};
-
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
