@@ -38,12 +38,13 @@ Just a repo with all my configs :)
 + Used [DiscordRecolor](https://betterdiscord.app/theme/DiscordRecolor) theme for customizing the native Discord theme
 
 ### st
-+ added 5 patches
++ added 6 patches
   - [scrollback](https://st.suckless.org/patches/scrollback/) (let you scroll thought the past outputs)
   - [alpha](https://st.suckless.org/patches/alpha/) (does what the title says)
   - [dynamic cursor color](https://st.suckless.org/patches/dynamic-cursor-color/) (colors the cursor)
   - [blinking cursor](https://st.suckless.org/patches/blinking_cursor/) (blinks the cursor like in old movies ;) )
   - [bold is not bright](https://st.suckless.org/patches/bold-is-not-bright/) (it use the bold font instead of using the white color)
+  - [autocomplete](https://st.suckless.org/patches/autocomplete/) (it just autocomplete when you write)
 
 ## Screenshots
 ![dwm](https://user-images.githubusercontent.com/88589756/160250288-25aa2684-7a44-434e-b0be-59cd9a5fbcf1.png)
