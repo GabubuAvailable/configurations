@@ -1883,10 +1883,14 @@ kpress(XEvent *ev)
 	/* 1. shortcuts */
 	for (bp = shortcuts; bp < shortcuts + LEN(shortcuts); bp++) {
 		if (ksym == bp->keysym && match(bp->mod, e->state)) {
+			if (bp -> func != autocomplete)
+				autocomplete ((const Arg []) { ACMPL_DEACTIVATE });
 			bp->func(&(bp->arg));
 			return;
 		}
 	}
+
+	autocomplete ((const Arg []) { ACMPL_DEACTIVATE });
 
 	/* 2. custom keys from config.h */
 	if ((customkey = kmap(ksym, e->state))) {
