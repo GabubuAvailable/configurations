@@ -37,6 +37,14 @@ Just a repo with all my configs :)
 ### Discord (BD)
 + Used [DiscordRecolor](https://betterdiscord.app/theme/DiscordRecolor) theme for customizing the native Discord theme
 
+### st
++ added 5 patches
+  - [scrollback](https://st.suckless.org/patches/scrollback/) (let you scroll thought the past outputs)
+  - [alpha](https://st.suckless.org/patches/alpha/) (does what the title says)
+  - [dynamic cursor color](https://st.suckless.org/patches/dynamic-cursor-color/) (colors the cursor)
+  - [blinking cursor](https://st.suckless.org/patches/blinking_cursor/) (blinks the cursor like in old movies ;) )
+  - [bold is not bright](https://st.suckless.org/patches/bold-is-not-bright/) (it use the bold font instead of using the white color)
+
 ## Screenshots
 ![dwm](https://user-images.githubusercontent.com/88589756/160250288-25aa2684-7a44-434e-b0be-59cd9a5fbcf1.png)
 dwm
@@ -44,6 +52,8 @@ dwm
 dwm bar
 ![alacritty](https://user-images.githubusercontent.com/88589756/160250311-a6f1f711-9e1a-474f-b335-dfe8fd3b16a4.png)
 alacritty - the terminal
+![st](https://user-images.githubusercontent.com/88589756/161034238-fe636170-919f-4110-9254-f7c5bb9dade8.png)
+st - the another terminal >:)
 ![dmenu](https://user-images.githubusercontent.com/88589756/160250334-797ec0a9-a8a3-496e-9a9f-8cc98f91ce59.png)
 dmenu
 ![slstatus](https://user-images.githubusercontent.com/88589756/160250357-03f345c5-b172-4b5c-b442-114e4ed4f1a1.png)
