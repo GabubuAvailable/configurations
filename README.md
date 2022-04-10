@@ -6,13 +6,13 @@ Just a repo with all my configs :)
 + dmenu
 + alacritty
 + Discord (BD)
++ [candybar](https://github.com/jornmann/candybar)
 
 ## What I modified/added?
 ### dwm (dynamic window manager)
-+ added 7 patches
++ added 6 patches
   - [alwayscenter](https://dwm.suckless.org/patches/alwayscenter/) (every floating window will spawn always to the center)
   - [bar height](https://dwm.suckless.org/patches/bar_height/) (height of the bar)
-  - [centeredwindowname](https://dwm.suckless.org/patches/centeredwindowname/) (window name on the center of bar)
   - [colorbar](https://dwm.suckless.org/patches/colorbar/) (colors the bar)
   - [focusonclick](https://dwm.suckless.org/patches/focusonclick/) (focus on click duh)
   - [fullgaps](https://dwm.suckless.org/patches/fullgaps/) (gaps between windows)
@@ -22,7 +22,7 @@ Just a repo with all my configs :)
   - [dmpc](https://github.com/jornmann/dmpc/) (dmenu mpc)
   - feh (doas or sudo pacman/apt/emerge -S/install/--ask feh) (an image viewer. feh is used for setwallpaper to work properly)
   - picom (doas or sudo pacman/apt/emerge -S/install/--ask picom) (standalone compositor for Xorg)
-+ the fonts it uses are "terminus" and "fontawesome"
++ the fonts it uses are "terminus" and "[siji-ng]https://github.com/begss/siji-ng"
 
 ### slstatus
 + displays only time, date and my YouTube channel name (nothing special)
@@ -47,17 +47,17 @@ Just a repo with all my configs :)
   - [autocomplete](https://st.suckless.org/patches/autocomplete/) (it just autocomplete when you write)
 
 ## Screenshots
-![dwm](https://user-images.githubusercontent.com/88589756/160250288-25aa2684-7a44-434e-b0be-59cd9a5fbcf1.png)
-dwm
-![dwm bar](https://user-images.githubusercontent.com/88589756/160917399-b790bf22-b648-4d5f-8c26-a3cd8c9e9c07.png)
-dwm bar
+### dwm
+![dwm](https://user-images.githubusercontent.com/88589756/162613450-6a20b806-242a-4a05-8ed2-daa9f1d934e9.png)
+### dwm bar
+![dwm bar](https://user-images.githubusercontent.com/88589756/162613356-8bd5ebe1-2cd5-409f-b603-a4b05f3ca54a.png)
+### alacritty - the terminal
 ![alacritty](https://user-images.githubusercontent.com/88589756/160250311-a6f1f711-9e1a-474f-b335-dfe8fd3b16a4.png)
-alacritty - the terminal
+### st - the another terminal >:)
 ![st](https://user-images.githubusercontent.com/88589756/161034238-fe636170-919f-4110-9254-f7c5bb9dade8.png)
-st - the another terminal >:)
+### dmenu
 ![dmenu](https://user-images.githubusercontent.com/88589756/160250334-797ec0a9-a8a3-496e-9a9f-8cc98f91ce59.png)
-dmenu
+### slstatus
 ![slstatus](https://user-images.githubusercontent.com/88589756/160250357-03f345c5-b172-4b5c-b442-114e4ed4f1a1.png)
-slstatus
+### discord
 ![Discord](https://user-images.githubusercontent.com/88589756/160545895-a5977c52-ee0f-4588-a8c6-c5306e48dc72.png)
-discord
