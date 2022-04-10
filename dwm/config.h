@@ -15,7 +15,7 @@ static const int showbar            = 1;     /* 0 means no bar */
 static const int topbar             = 0;     /* 0 means bottom bar */
 static const int focusonwheel       = 0;     /* 0 means it won't use the wheel instead of click to focus */
 static const int user_bh            = 20;       /* height of the bar */
-static const char *fonts[]          = { "terminus:size=9", "Font Awesome 6 Free:size=10:antialias=true", "Font Awesome 6 Brands:size=10:antialias=true" };
+static const char *fonts[]          = { "terminus:size=9", "Siji" }; // Add (Font Awesome 6 Free:size10:antialias=true) and (Font Awesome 6 Brands:size=10:antialias=true) for FontAwesome font
 static const char dmenufont[]       = "terminus:size=9";
 static const char col_white[]       = "#ffffff"; // white
 static const char col_gray[]        = "#b5b5b5"; // gray {for unsellected duh}
