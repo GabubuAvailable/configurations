@@ -10,13 +10,14 @@ Just a repo with all my configs :)
 
 ## What I modified/added?
 ### dwm (dynamic window manager)
-+ added 6 patches
++ added 7 patches
   - [alwayscenter](https://dwm.suckless.org/patches/alwayscenter/) (every floating window will spawn always to the center)
   - [bar height](https://dwm.suckless.org/patches/bar_height/) (height of the bar)
   - [colorbar](https://dwm.suckless.org/patches/colorbar/) (colors the bar)
   - [focusonclick](https://dwm.suckless.org/patches/focusonclick/) (focus on click duh)
   - [fullgaps](https://dwm.suckless.org/patches/fullgaps/) (gaps between windows)
   - [systray](https://dwm.suckless.org/patches/systray/) (system tray for apps i use most)
+  - [hide vacant tags](https://dwm.suckless.org/patches/hide_vacant_tags/) (it hides tags that don't have applications on them)
 + softwares i use for a complete modification
   - [setwallpaper](https://github.com/speediegamer/setwallpaper) (does what the title says lol)
   - [dmpc](https://github.com/jornmann/dmpc/) (dmenu mpc)
