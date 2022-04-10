@@ -44,7 +44,6 @@ Just a repo with all my configs :)
   - [dynamic cursor color](https://st.suckless.org/patches/dynamic-cursor-color/) (colors the cursor)
   - [blinking cursor](https://st.suckless.org/patches/blinking_cursor/) (blinks the cursor like in old movies ;) )
   - [bold is not bright](https://st.suckless.org/patches/bold-is-not-bright/) (it use the bold font instead of using the white color)
-  - [autocomplete](https://st.suckless.org/patches/autocomplete/) (it just autocomplete when you write)
 
 ## Screenshots
 ### dwm
