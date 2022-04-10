@@ -22,7 +22,7 @@ Just a repo with all my configs :)
   - [dmpc](https://github.com/jornmann/dmpc/) (dmenu mpc)
   - feh (doas or sudo pacman/apt/emerge -S/install/--ask feh) (an image viewer. feh is used for setwallpaper to work properly)
   - picom (doas or sudo pacman/apt/emerge -S/install/--ask picom) (standalone compositor for Xorg)
-+ the fonts it uses are "terminus" and "[siji-ng]https://github.com/begss/siji-ng"
++ the fonts it uses are "terminus" and "[siji-ng](https://github.com/begss/siji-ng)"
 
 ### slstatus
 + displays only time, date and my YouTube channel name (nothing special)
