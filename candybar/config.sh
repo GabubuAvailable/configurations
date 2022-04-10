@@ -6,9 +6,9 @@
 
 # module list
 # module name           icon/prefix     suffix
-module_mpc              " "            " | "
-module_ram              " "            " | "
-module_cpu              " "            " | "
+#module_mpc              " "            " | "
+#module_ram              " "            " | "
+#module_cpu              " "            " | "
 module_user             " "            " | "
 module_vol              " "            "% | "
 module_ip               " "            " | "
