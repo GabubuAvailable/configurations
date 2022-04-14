@@ -80,6 +80,7 @@ static const char *flameshot[] = { "flameshot", "gui",  NULL };
 static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
 static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
 static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
+static const char *mutemic[] = { "/usr/bin/pactl", "set-source-mute", "alsa_input.pci-0000_00_1b.0.analog-stereo", "toggle", NULL };
 static const char *light_up[] = {"/usr/bin/light", "-A", "5", NULL};
 static const char *light_down[] = {"/usr/bin/light", "-U", "5", NULL};
 
@@ -95,6 +96,7 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioRaiseVolume,  spawn,      {.v = upvol   } },
 	{ 0,     			XF86XK_MonBrightnessUp,   spawn,      {.v = light_up } },
 	{ 0,	        		XF86XK_MonBrightnessDown, spawn,      {.v = light_down } },
+	{ 0,                            XF86XK_AudioMicMute,         spawn,      {.v = mutemic } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },

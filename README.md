@@ -45,6 +45,7 @@ Just a repo with all my configs :)
   - [dynamic cursor color](https://st.suckless.org/patches/dynamic-cursor-color/) (colors the cursor)
   - [blinking cursor](https://st.suckless.org/patches/blinking_cursor/) (blinks the cursor like in old movies ;) )
   - [bold is not bright](https://st.suckless.org/patches/bold-is-not-bright/) (it use the bold font instead of using the white color)
+  - [font2](https://st.suckless.org/patches/font2/) (allows you to use more than 1 font on terminal)
 
 ## Screenshots
 ### dwm

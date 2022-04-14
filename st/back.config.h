@@ -6,7 +6,6 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "terminus:pixelsize=10";
-static char *font2 = "Siji";
 static int borderpx = 2;
 
 /*
@@ -181,6 +180,8 @@ static unsigned int defaultattr = 11;
  */
 static uint forcemousemod = ShiftMask;
 
+# include "autocomplete.h"
+
 /*
  * Internal mouse shortcuts.
  * Beware that overloading Button1 will disable the selection.
@@ -214,6 +215,14 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+	{ ControlMask|Mod1Mask, XK_slash,       autocomplete,   { .i = ACMPL_WORD        } },
+	{ ControlMask|Mod1Mask, XK_period,      autocomplete,   { .i = ACMPL_FUZZY_WORD  } },
+	{ ControlMask|Mod1Mask, XK_comma,       autocomplete,   { .i = ACMPL_FUZZY       } },
+	{ ControlMask|Mod1Mask, XK_apostrophe,  autocomplete,   { .i = ACMPL_SUFFIX      } },
+	{ ControlMask|Mod1Mask, XK_semicolon,   autocomplete,   { .i = ACMPL_SURROUND    } },
+	{ ControlMask|Mod1Mask, XK_bracketright,autocomplete,   { .i = ACMPL_WWORD       } },
+	{ ControlMask|Mod1Mask, XK_bracketleft, autocomplete,   { .i = ACMPL_FUZZY_WWORD } },
+	{ ControlMask|Mod1Mask, XK_equal,       autocomplete,   { .i = ACMPL_UNDO        } },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 };

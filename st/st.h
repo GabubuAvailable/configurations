@@ -77,8 +77,6 @@ typedef union {
 	const char *s;
 } Arg;
 
-void autocomplete (const Arg *);
-
 void die(const char *, ...);
 void redraw(void);
 void draw(void);

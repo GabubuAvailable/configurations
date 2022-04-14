@@ -1,17 +1,15 @@
---- config.def.h	2021-12-14 20:03:03.981322164 +0400
-+++ config.def.h	2021-12-14 20:22:30.088821478 +0400
-@@ -201,6 +203,14 @@
- 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
- 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
- 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-+	{ ControlMask|Mod1Mask, XK_slash,       autocomplete,   { .i = ACMPL_WORD        } },
-+	{ ControlMask|Mod1Mask, XK_period,      autocomplete,   { .i = ACMPL_FUZZY_WORD  } },
-+	{ ControlMask|Mod1Mask, XK_comma,       autocomplete,   { .i = ACMPL_FUZZY       } },
-+	{ ControlMask|Mod1Mask, XK_apostrophe,  autocomplete,   { .i = ACMPL_SUFFIX      } },
-+	{ ControlMask|Mod1Mask, XK_semicolon,   autocomplete,   { .i = ACMPL_SURROUND    } },
-+	{ ControlMask|Mod1Mask, XK_bracketright,autocomplete,   { .i = ACMPL_WWORD       } },
-+	{ ControlMask|Mod1Mask, XK_bracketleft, autocomplete,   { .i = ACMPL_FUZZY_WWORD } },
-+	{ ControlMask|Mod1Mask, XK_equal,       autocomplete,   { .i = ACMPL_UNDO        } },
- };
+--- config.def.h
++++ config.def.h
+@@ -6,6 +6,12 @@
+  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
+  */
+ static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
++/* Spare fonts */
++static char *font2[] = {
++/*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
++/*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
++};
++
+ static int borderpx = 2;
  
  /*
