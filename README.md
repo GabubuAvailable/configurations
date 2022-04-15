@@ -60,5 +60,7 @@ Just a repo with all my configs :)
 ![dmenu](https://user-images.githubusercontent.com/88589756/160250334-797ec0a9-a8a3-496e-9a9f-8cc98f91ce59.png)
 ### slstatus
 ![slstatus](https://user-images.githubusercontent.com/88589756/160250357-03f345c5-b172-4b5c-b442-114e4ed4f1a1.png)
+### candybar
+![candybar](https://user-images.githubusercontent.com/88589756/163570413-35378f1a-164c-4290-9531-ae6a75178d3f.png)
 ### discord
 ![Discord](https://user-images.githubusercontent.com/88589756/160545895-a5977c52-ee0f-4588-a8c6-c5306e48dc72.png)
