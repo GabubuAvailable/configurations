@@ -22,11 +22,15 @@ module_user() {
 	export bar="${bar}${1}$(whoami)@$(cat /proc/sys/kernel/hostname)${2}"
 }
 
-module_vol() {
-	export bar="${bar}${1}$(if command -v pamixer > NULL; then pamixer --sink 0 --get-volume; else amixer sget Master | awk -F'[][]' '/Mono:/ { print $2 }'; fi)${2}"
+module_vol_pa() {
+	export bar="${bar}${1}$(echo "`pamixer --sink 0 --get-volume`%")${2}"
 }
 
-module_mic() {
+module_vol_alsa() {
+	export bar="${bar}${1}$(echo "`amixer sget Master | tail -n1 | sed -r "s/.*\[(.*)%\].*/\1/"`%")${2}"
+}
+
+module_mic_pa() {
 	export bar="${bar}${1}$(if pamixer --source 1 --get-mute | grep -q 'true'; then echo "OFF"; else echo "ON"; fi)${2}"
 }
 
@@ -56,7 +60,7 @@ module_cpu() {
 }
 
 module_battery() {
-	export bar="${bar}${1}$(cat /sys/class/power_supply/BAT0/capacity)%${2}"
+	export bar="${bar}${1}$(if cat /sys/class/power_supply/BAT0/uevent | grep -q "POWER_SUPPLY_STATUS=Charging";then echo "`cat /sys/class/power_supply/BAT0/capacity`";else echo "`cat /sys/class/power_supply/BAT0/capacity`";fi)%${2}"
 }
 
 module_todo() {
