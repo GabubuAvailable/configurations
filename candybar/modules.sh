@@ -23,15 +23,19 @@ module_user() {
 }
 
 module_vol_pa() {
-	export bar="${bar}${1}$(echo "`pamixer --sink 0 --get-volume`%")${2}"
+	export bar="${bar}${1}$(if pamixer --sink 0 --get-mute | grep -q 'false'; then echo "`pamixer --sink 0 --get-volume`%"; else echo "OFF"; fi)${2}"
 }
 
 module_vol_alsa() {
-	export bar="${bar}${1}$(echo "`amixer sget Master | tail -n1 | sed -r "s/.*\[(.*)%\].*/\1/"`%")${2}"
+	export bar="${bar}${1}$(if amixer sget Master | grep -q 'on'; then echo "`amixer sget Master | tail -n1 | sed -r "s/.*\[(.*)%\].*/\1/"`%"; else echo "OFF"; fi)${2}"
 }
 
 module_mic_pa() {
-	export bar="${bar}${1}$(if pamixer --source 1 --get-mute | grep -q 'true'; then echo "OFF"; else echo "ON"; fi)${2}"
+	export bar="${bar}${1}$(if pamixer --source alsa_input.pci-0000_00_1b.0.analog-stereo --get-mute | grep -q 'true'; then echo "OFF"; else echo "ON"; fi)${2}"
+}
+
+module_mic_alsa() {
+	export bar="${bar}${1}$(if amixer sget Capture | grep -q 'off'; then echo "OFF"; else echo "ON"; fi)${2}"
 }
 
 module_kernel() {

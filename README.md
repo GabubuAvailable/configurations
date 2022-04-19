@@ -18,6 +18,8 @@ Just a repo with all my configs :)
   - [fullgaps](https://dwm.suckless.org/patches/fullgaps/) (gaps between windows)
   - [systray](https://dwm.suckless.org/patches/systray/) (system tray for apps i use most)
   - [hide vacant tags](https://dwm.suckless.org/patches/hide_vacant_tags/) (it hides tags that don't have applications on them)
+  - [dynamic swallow](https://dwm.suckless.org/patches/dynamicswallow/) (idk how to explain lol)
+  - [winicon](https://dwm.suckless.org/patches/winicon/) (it shows the window icon)
 + softwares i use for a complete modification
   - [setwallpaper](https://github.com/speediegamer/setwallpaper) (does what the title says lol)
   - [dmpc](https://github.com/jornmann/dmpc/) (dmenu mpc)
