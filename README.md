@@ -51,9 +51,7 @@ Just a repo with all my configs :)
 
 ## Screenshots
 ### dwm
-![dwm](https://user-images.githubusercontent.com/88589756/162613450-6a20b806-242a-4a05-8ed2-daa9f1d934e9.png)
-### dwm bar
-![dwm bar](https://user-images.githubusercontent.com/88589756/162613356-8bd5ebe1-2cd5-409f-b603-a4b05f3ca54a.png)
+![dwm](https://user-images.githubusercontent.com/88589756/164895850-6dab350d-b58f-4d05-8be2-40561a65bb80.png)
 ### alacritty - the terminal
 ![alacritty](https://user-images.githubusercontent.com/88589756/160250311-a6f1f711-9e1a-474f-b335-dfe8fd3b16a4.png)
 ### st - the another terminal >:)
@@ -63,6 +61,6 @@ Just a repo with all my configs :)
 ### slstatus
 ![slstatus](https://user-images.githubusercontent.com/88589756/160250357-03f345c5-b172-4b5c-b442-114e4ed4f1a1.png)
 ### candybar
-![candybar](https://user-images.githubusercontent.com/88589756/163570413-35378f1a-164c-4290-9531-ae6a75178d3f.png)
+![candybar](https://user-images.githubusercontent.com/88589756/164895866-dd8f57d3-30f3-4c73-92af-eff5efa9bc2f.png)
 ### discord
 ![Discord](https://user-images.githubusercontent.com/88589756/160545895-a5977c52-ee0f-4588-a8c6-c5306e48dc72.png)
