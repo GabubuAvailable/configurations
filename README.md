@@ -10,7 +10,7 @@ Just a repo with all my configs :)
 
 ## What I modified/added?
 ### dwm (dynamic window manager)
-+ added 7 patches
++ added 9 patches
   - [alwayscenter](https://dwm.suckless.org/patches/alwayscenter/) (every floating window will spawn always to the center)
   - [bar height](https://dwm.suckless.org/patches/bar_height/) (height of the bar)
   - [colorbar](https://dwm.suckless.org/patches/colorbar/) (colors the bar)
