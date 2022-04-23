@@ -14,7 +14,7 @@ static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;     /* 0 means no bar */
 #define ICONSIZE 16   /* icon size */
 #define ICONSPACING 5 /* space between icon and title */
-static const int topbar             = 0;     /* 0 means bottom bar */
+static const int topbar             = 1;     /* 0 means bottom bar */
 static const int focusonwheel       = 0;     /* 0 means it won't use the wheel instead of click to focus */
 static const int user_bh            = 20;       /* height of the bar */
 static const char *fonts[]          = { "terminus:size=9", "Siji" }; // Add (Font Awesome 6 Free:size10:antialias=true) and (Font Awesome 6 Brands:size=10:antialias=true) for FontAwesome font
