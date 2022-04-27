@@ -38,7 +38,8 @@ Just a repo with all my configs :)
 + nothing special, just changed colors and placed to the middle
 
 ### Discord (BD)
-+ Used [DiscordRecolor](https://betterdiscord.app/theme/DiscordRecolor) theme for customizing the native Discord theme
++ Customized [DiscordRecolor](https://betterdiscord.app/theme/DiscordRecolor)
++ Customized [Optimal Theme](https://github.com/kawaiizenbo/OptimalTheme)
 
 ### st
 + added 6 patches
@@ -62,5 +63,7 @@ Just a repo with all my configs :)
 ![slstatus](https://user-images.githubusercontent.com/88589756/160250357-03f345c5-b172-4b5c-b442-114e4ed4f1a1.png)
 ### candybar
 ![candybar](https://user-images.githubusercontent.com/88589756/164895866-dd8f57d3-30f3-4c73-92af-eff5efa9bc2f.png)
-### discord
+### discord - discordrecolor theme
 ![Discord](https://user-images.githubusercontent.com/88589756/160545895-a5977c52-ee0f-4588-a8c6-c5306e48dc72.png)
+### discord - optimal theme
+![Discord](https://user-images.githubusercontent.com/88589756/165638233-43079a65-7315-474c-a87e-6d096724c541.png)
