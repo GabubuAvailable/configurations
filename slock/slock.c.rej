@@ -1,0 +1,78 @@
+--- slock.c
++++ slock.c
+@@ -16,6 +16,7 @@
+ #include <X11/keysym.h>
+ #include <X11/Xlib.h>
+ #include <X11/Xutil.h>
++#include <X11/XKBlib.h>
+ 
+ #if HAVE_BSD_AUTH
+ #include <login_cap.h>
+@@ -28,7 +29,7 @@ typedef struct {
+ 	int screen;
+ 	Window root, win;
+ 	Pixmap pmap;
+-	unsigned long colors[2];
++	unsigned long colors[3];
+ } Lock;
+ 
+ static Lock **locks;
+@@ -106,14 +107,18 @@ readpw(Display *dpy, const char *pws)
+ #endif
+ {
+ 	char buf[32], passwd[256];
+-	int num, screen;
+-	unsigned int len, llen;
++	int num, screen, caps, lcaps;
++	unsigned int len, llen, indicators;
+ 	KeySym ksym;
+ 	XEvent ev;
+ 
+ 	len = llen = 0;
++    caps = lcaps = 0;
+ 	running = True;
+ 
++    if(!XkbGetIndicatorState(dpy, XkbUseCoreKbd, &indicators))
++        caps = indicators & 1;
++
+ 	/* As "slock" stands for "Simple X display locker", the DPMS settings
+ 	 * had been removed and you can set it with "xset" or some other
+ 	 * utility. This way the user can easily set a customized DPMS
+@@ -163,9 +171,9 @@ readpw(Display *dpy, const char *pws)
+ 				}
+ 				break;
+ 			}
+-			if (llen == 0 && len != 0) {
++			if ((llen == 0 && len != 0) || caps != lcaps) {
+ 				for (screen = 0; screen < nscreens; screen++) {
+-					XSetWindowBackground(dpy, locks[screen]->win, locks[screen]->colors[1]);
++					XSetWindowBackground(dpy, locks[screen]->win, locks[screen]->colors[caps ? 2 : 1]);
+ 					XClearWindow(dpy, locks[screen]->win);
+ 				}
+ 			} else if (llen != 0 && len == 0) {
+@@ -175,6 +183,7 @@ readpw(Display *dpy, const char *pws)
+ 				}
+ 			}
+ 			llen = len;
++            lcaps = caps;
+ 		}
+ 		else for (screen = 0; screen < nscreens; screen++)
+ 			XRaiseWindow(dpy, locks[screen]->win);
+@@ -188,7 +197,7 @@ unlockscreen(Display *dpy, Lock *lock)
+ 		return;
+ 
+ 	XUngrabPointer(dpy, CurrentTime);
+-	XFreeColors(dpy, DefaultColormap(dpy, lock->screen), lock->colors, 2, 0);
++	XFreeColors(dpy, DefaultColormap(dpy, lock->screen), lock->colors, 3, 0);
+ 	XFreePixmap(dpy, lock->pmap);
+ 	XDestroyWindow(dpy, lock->win);
+ 
+@@ -222,6 +231,8 @@ lockscreen(Display *dpy, int screen)
+ 	lock->win = XCreateWindow(dpy, lock->root, 0, 0, DisplayWidth(dpy, lock->screen), DisplayHeight(dpy, lock->screen),
+ 	                          0, DefaultDepth(dpy, lock->screen), CopyFromParent,
+ 	                          DefaultVisual(dpy, lock->screen), CWOverrideRedirect | CWBackPixel, &wa);
++	XAllocNamedColor(dpy, DefaultColormap(dpy, lock->screen), COLORC, &color, &dummy);
++	lock->colors[2] = color.pixel;
+ 	XAllocNamedColor(dpy, DefaultColormap(dpy, lock->screen), COLOR2, &color, &dummy);
+ 	lock->colors[1] = color.pixel;
+ 	XAllocNamedColor(dpy, DefaultColormap(dpy, lock->screen), COLOR1, &color, &dummy);

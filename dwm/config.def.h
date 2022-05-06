@@ -94,6 +94,7 @@ static const char *mutemic[] = { "/usr/bin/pactl", "set-source-mute", "alsa_inpu
 /*static const char *mutemic[] = { "/usr/bin/amixer", "set", "Capture", "toggle", NULL };  Mute/unmute mic using amixer */
 static const char *light_up[] = {"/usr/bin/light", "-A", "5", NULL};
 static const char *light_down[] = {"/usr/bin/light", "-U", "5", NULL};
+static const char *shutdown[] = {"/bin/dshutdown", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -141,7 +142,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_q,      spawn,          {.v = shutdown } },
 };
 
 /* button definitions */
