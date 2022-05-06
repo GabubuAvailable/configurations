@@ -7,6 +7,7 @@ Just a repo with all my configs :)
 + alacritty
 + Discord (BD)
 + [candybar](https://github.com/jornmann/candybar)
++ slock
 
 ## What I modified/added?
 ### dwm (dynamic window manager)
@@ -50,6 +51,11 @@ Just a repo with all my configs :)
   - [bold is not bright](https://st.suckless.org/patches/bold-is-not-bright/) (it use the bold font instead of using the white color)
   - [font2](https://st.suckless.org/patches/font2/) (allows you to use more than 1 font on terminal)
 
+### slock
++ added ONLY 2 at this time
+  - [message](https://tools.suckless.org/slock/patches/message/) (it shows a message on screen)
+  - [capscolor](https://tools.suckless.org/slock/patches/capscolor/) (shows a specific color when capslock is on)
+
 ## Screenshots
 ### dwm
 ![dwm](https://user-images.githubusercontent.com/88589756/164895850-6dab350d-b58f-4d05-8be2-40561a65bb80.png)
@@ -67,3 +73,5 @@ Just a repo with all my configs :)
 ![Discord](https://user-images.githubusercontent.com/88589756/160545895-a5977c52-ee0f-4588-a8c6-c5306e48dc72.png)
 ### discord - optimal theme
 ![Discord](https://user-images.githubusercontent.com/88589756/165638233-43079a65-7315-474c-a87e-6d096724c541.png)
+### slock
+![slock](https://user-images.githubusercontent.com/88589756/167171669-6356114f-c7e4-458c-94ef-66d54f3a0575.png)
