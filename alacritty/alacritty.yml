@@ -21,9 +21,6 @@ font:
 
   size: 7
 
-
-
-
 ## Color scheme
 colors:
   # Default colors
@@ -38,39 +35,39 @@ colors:
 
   # Normal colors
   normal:
-    black: '#333333'
+    black: '#000000'
+    red: '#cd0000'
+    green: '#00cd00'
+    yellow: '#cdcd00'
+    blue: '#0000cd'
+    magenta: '#cd00cd'
+    cyan: '#00cdcd'
+    white: '#e5e5e5'
+
+  # Bright colors
+  bright:
+    black: '#7f7f7f'
     red: '#ff0000'
     green: '#00ff00'
     yellow: '#ffff00'
     blue: '#0000ff'
-    magenta: '#a700b6'
-    cyan: '#1abc9c'
-    white: '#fcfcfc'
-
-  # Bright colors
-  bright:
-    black: '#7f8c8d'
-    red: '#ff5959'
-    green: '#59ff59'
-    yellow: '#ffff59'
-    blue: '#5959ff'
-    magenta: '#a754b6'
-    cyan: '#16a085'
+    magenta: '#ff00ff'
+    cyan: '#00ffff'
     white: '#ffffff'
 
   # Dim colors
   dim:
     black: '#000000'
-    red: '#900000'
-    green: '#009000'
-    yellow: '#909000'
-    blue: '#000090'
-    magenta: '#61006a'
-    cyan: '#186c60'
-    white: '#63686d'
+    red: '#cd0000'
+    green: '#00cd00'
+    yellow: '#cdcd00'
+    blue: '#0000cd'
+    magenta: '#cd00cd'
+    cyan: '#00cdcd'
+    white: '#e5e5e5'
 
 
 
 ## Transparency (maybe you want. who knows)
 window:
-    opacity: 0.9
+    opacity: 0.8

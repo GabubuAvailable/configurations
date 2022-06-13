@@ -2,7 +2,7 @@
 # candybar modules
 
 module_date() {
-	export bar="${bar}${1}$(date +'%a %Y-%m-%d %R')${2}"
+	export bar="${bar}${1}$(date +' %Y.%m.%d %R')${2}"
 }
 
 module_mpc() {
@@ -64,7 +64,7 @@ module_cpu() {
 }
 
 module_battery() {
-	export bar="${bar}${1}$(if cat /sys/class/power_supply/BAT0/uevent | grep -q "POWER_SUPPLY_STATUS=Charging";then echo "`cat /sys/class/power_supply/BAT0/capacity`";else echo "`cat /sys/class/power_supply/BAT0/capacity`";fi)%${2}"
+	export bar="${bar}${1}$(if cat /sys/class/power_supply/BAT0/uevent | grep -q "POWER_SUPPLY_STATUS=Charging";then echo " `cat /sys/class/power_supply/BAT0/capacity`";elif cat /sys/class/power_supply/BAT0/uevent | grep -q "POWER_SUPPLY_STATUS=Unknown";then echo " `cat /sys/class/power_supply/BAT0/capacity`";else echo "`cat /sys/class/power_supply/BAT0/capacity`";fi)%${2}"
 }
 
 module_todo() {

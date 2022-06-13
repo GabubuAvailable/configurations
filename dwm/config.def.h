@@ -45,8 +45,9 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "SimpleScreenRecorder",     NULL,       NULL,       0,            1,           -1 },
+	{ "Krita",    NULL,       NULL,       0,            1,           -1 },
+	{ "mpv",      NULL,       NULL,      0,            1,           -1 },
 };
 
 /* window swallowing */
@@ -64,7 +65,7 @@ static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "",      tile },    /* first entry is default */
 	{ "",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "",      monocle },
 };
 
 /* key definitions */
@@ -82,19 +83,19 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *dmpc[] = { "dmpc", NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 static const char *flameshot[] = { "flameshot", "gui",  NULL };
-static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL }; /* Volume up using pactl  */
-static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL }; /* Volume down using pactl */
-static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute", "0", "toggle",     NULL }; /* Mute/unmute using pactl */
-static const char *mutemic[] = { "/usr/bin/pactl", "set-source-mute", "alsa_input.pci-0000_00_1b.0.analog-stereo", "toggle",     NULL }; /* Mute/unmute mic using pactl */
+static const char *upvol[]   = { "/usr/bin/pulsemixer", "--id", "sink-0", "--max-volume", "100", "--change-volume", "+5",     NULL }; /* Volume up using pulsemixer */
+static const char *downvol[] = { "/usr/bin/pulsemixer", "--id", "sink-0", "--max-volume", "100", "--change-volume", "-5",     NULL }; /* Volume down using pulsemixer */
+static const char *mutevol[] = { "/usr/bin/pulsemixer", "--id", "sink-0", "--toggle-mute",     NULL }; /* Mute/unmute using pulsemixer */
+static const char *mutemic[] = { "/usr/bin/pulsemixer", "--id", "source-1", "--toggle-mute",     NULL }; /* Mute/unmute mic using pulsemixer */
 /*static const char *upvol[]   = { "/usr/bin/amixer", "-q", "sset", "Master", "5%+",     NULL };  Volume up using amixer  */
 /*static const char *downvol[] = { "/usr/bin/amixer", "-q", "sset", "Master", "5%-",     NULL };  Volume down using amixer */
 /*static const char *mutevol[] = { "/usr/bin/amixer", "-q", "sset", "Master", "toggle",  NULL };  Mute/unmute using amixer */
 /*static const char *mutemic[] = { "/usr/bin/amixer", "set", "Capture", "toggle", NULL };  Mute/unmute mic using amixer */
 static const char *light_up[] = {"/usr/bin/light", "-A", "5", NULL};
 static const char *light_down[] = {"/usr/bin/light", "-U", "5", NULL};
-static const char *shutdown[] = {"/bin/dshutdown", NULL};
+static const char *display[] = {"/bin/ddisplay", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -103,6 +104,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = dmpc } },
 	{ 0,                            XK_Print,  spawn,          {.v = flameshot } },
+	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = display } },
 	{ 0,                            XF86XK_AudioLowerVolume,  spawn,      {.v = downvol } },
 	{ 0,                            XF86XK_AudioMute,         spawn,      {.v = mutevol } },
 	{ 0,                            XF86XK_AudioRaiseVolume,  spawn,      {.v = upvol   } },
@@ -142,7 +144,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      spawn,          {.v = shutdown } },
+	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
 /* button definitions */
